@@ -62,7 +62,7 @@ function twitter() {
 
     //THIS GRABS THE SECOND NODE FOR USERNAME ARGUMENT AND PASSES IT THRPUGH
     // var userInput = process.argv[3];
-
+    var request = require("request");
     //NODE FUNCTION THAT GRABS THE TWITTER INFROMATION 
     var params = { screen_name: value, count: 20 };
     client.get('statuses/user_timeline', params, function(error, tweets, response) {
@@ -118,7 +118,7 @@ function spotify() {
         });
     } else {
         {
-            var spotify = require('spotify');
+            var Spotify = require('node-spotify-app');
 
             spotify.search({
                 type: 'track',
